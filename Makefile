@@ -4,15 +4,11 @@ BACKEND_ROOT := $(shell pwd)
 
 SRC_DIR := $(BACKEND_ROOT)/src
 
-runserver:
+run:
 	PYTHONPATH=$(SRC_DIR): uv run python $(SRC_DIR)/manage.py runserver
 
-
-makemigrations:
-	PYTHONPATH=$(SRC_DIR): uv run python $(SRC_DIR)/manage.py makemigrations
-
-
 migrate:
+	PYTHONPATH=$(SRC_DIR): uv run python $(SRC_DIR)/manage.py makemigrations
 	PYTHONPATH=$(SRC_DIR): uv run python $(SRC_DIR)/manage.py migrate
 
 commit:
@@ -20,3 +16,9 @@ commit:
 	git commit -m "updated $(shell date +%Y-%m-%d)"
 	git push origin main
 
+app:
+	PYTHONPATH=$(SRC_DIR): uv run python $(SRC_DIR)/manage.py startapp $(name)
+
+env:
+	@echo source .venv/bin/activate
+	

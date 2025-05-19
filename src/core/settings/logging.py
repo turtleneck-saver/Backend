@@ -36,7 +36,7 @@ LOGGING = {
         "file": {
             "class": "logging.FileHandler",
             "formatter": "verbose",
-            "filename": "prod.log",
+            "filename": "logs/prod.log",
             "level": "ERROR",
         }
     },
