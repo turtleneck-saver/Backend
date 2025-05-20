@@ -14,7 +14,7 @@ migrate:
 commit:
 	git add .
 	git commit -m "updated $(shell date +%Y-%m-%d)"
-	git push origin main
+	git push origin master
 
 app:
 	PYTHONPATH=$(SRC_DIR): uv run python $(SRC_DIR)/manage.py startapp $(name)
