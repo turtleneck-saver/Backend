@@ -1,4 +1,6 @@
 import logging
+from pathlib import Path
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 class ColoredFormatter(logging.Formatter):
@@ -36,7 +38,7 @@ LOGGING = {
         "file": {
             "class": "logging.FileHandler",
             "formatter": "verbose",
-            "filename": "logs/prod.log",
+            "filename": ROOT_DIR / "prod.log",
             "level": "ERROR",
         }
     },
