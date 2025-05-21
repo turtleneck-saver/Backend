@@ -18,6 +18,6 @@ THIRD_PARTY_APPS = [
     'allauth.socialaccount.providers.google',
 ]
 
-LOCAL_APPS = ['home']
+LOCAL_APPS = ['auth']
 
 INSTALLED_APPS = VANILA_APPS + THIRD_PARTY_APPS

@@ -5,7 +5,7 @@
 ```python
 from django.contrib import admin # Django 관리자 페이지 관련 기능 가져옴
 from django.urls import path, include # URL 패턴 정의하는 기본 기능 가져옴
-from home.views import * # home 앱의 views.py 파일에 있는 모든 함수/클래스 가져옴 (사용자 생성, 구글 로그인 콜백 등)
+from auth.views import * # home 앱의 views.py 파일에 있는 모든 함수/클래스 가져옴 (사용자 생성, 구글 로그인 콜백 등)
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView # JWT 인증 관련 뷰 가져옴 (토큰 발급, 토큰 갱신)
 
 
