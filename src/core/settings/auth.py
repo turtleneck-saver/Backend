@@ -16,12 +16,6 @@ REST_FRAMEWORK = {
 }
 SITE_ID = 1
 
-REST_AUTH = {
-    'USE_JWT': True,
-    'JWT_AUTH_COOKIE': None,
-    'USER_DETAILS_SERIALIZER': 'your_app.serializers.CustomUserDetailsSerializer',
-}
-
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
@@ -34,7 +28,7 @@ LOGIN_REDIRECT_URL = '/callback/'
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'APP': {
-            'client_id': '',
+            'client_id': '235310330925-m7hmtbipvf03i085obskko131l84ske7.apps.googleusercontent.com',
             'secret': '',
             'key': ''
         },
