@@ -1,5 +1,3 @@
-# Makefile 예시 (backend/ 디렉토리에 있다고 가정)
-
 BACKEND_ROOT := $(shell pwd)
 
 SRC_DIR := $(BACKEND_ROOT)/src
