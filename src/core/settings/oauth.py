@@ -1,4 +1,5 @@
 from datetime import timedelta
+from src.utils.env import ENV
 
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
@@ -14,7 +15,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     )
 }
-SITE_ID = 1
 
 
 SIMPLE_JWT = {
@@ -27,11 +27,7 @@ SIMPLE_JWT = {
 LOGIN_REDIRECT_URL = '/callback/'
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        'APP': {
-            'client_id': '235310330925-m7hmtbipvf03i085obskko131l84ske7.apps.googleusercontent.com',
-            'secret': '',
-            'key': ''
-        },
+
         'SCOPE': [
             'profile',
             'email',
