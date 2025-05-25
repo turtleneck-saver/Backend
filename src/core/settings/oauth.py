@@ -1,5 +1,5 @@
 from datetime import timedelta
-from src.utils.env import ENV
+SOCIALACCOUNT_LOGIN_ON_GET = True
 
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
