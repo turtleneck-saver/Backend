@@ -24,7 +24,7 @@ SIMPLE_JWT = {
     'BLACKLIST_ENABLED': True,
 }
 
-LOGIN_REDIRECT_URL = 'http://localhost:3000'
+LOGIN_REDIRECT_URL = '/callback/'
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [
@@ -38,4 +38,5 @@ SOCIALACCOUNT_PROVIDERS = {
         'FETCH_USERINFO': True,
     }
 }
+
 SOCIALACCOUNT_STORE_TOKENS = True

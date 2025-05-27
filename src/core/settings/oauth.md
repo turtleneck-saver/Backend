@@ -12,7 +12,7 @@
 
 ```python
 SOCIALACCOUNT_LOGIN_ON_GET = True
-LOGIN_REDIRECT_URL = 'http://localhost:3000'
+LOGIN_REDIRECT_URL = '/callback/'
 SOCIALACCOUNT_STORE_TOKENS = True
 ```
 
