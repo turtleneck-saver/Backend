@@ -7,7 +7,6 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    # path('accounts/google/login/', oauth2_login, name='google_login'),
     path('accounts/', include('allauth.urls')),
     path('callback/', google_login_callback, name='callback'),
     #############################################################

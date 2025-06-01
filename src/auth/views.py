@@ -59,7 +59,7 @@ def validate_google_token(request):
     if request.method == 'POST':
         try:
             data = json.loads(request.body)
-            google_id_token = data.get('access_token')  # 실제로는 id_token임
+            google_id_token = data.get('access_token')
             print('|', google_id_token, '|')
 
             if not google_id_token:
