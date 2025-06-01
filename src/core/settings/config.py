@@ -9,7 +9,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
 WSGI_APPLICATION = 'src.core.wsgi.application'
-
+ASGI_APPLICATION = 'myproject.asgi.application'
 ROOT_URLCONF = 'core.urls'
 
 LANGUAGE_CODE = 'en-us'

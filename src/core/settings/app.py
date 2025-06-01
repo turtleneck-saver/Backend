@@ -16,8 +16,9 @@ THIRD_PARTY_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    'channels'
 ]
 
-LOCAL_APPS = ['auth']
+LOCAL_APPS = ['auth', 'web_socket']
 SITE_ID = 3
 INSTALLED_APPS = VANILA_APPS + THIRD_PARTY_APPS
