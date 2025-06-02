@@ -17,6 +17,9 @@ commit:
 app:
 	PYTHONPATH=$(SRC_DIR): uv run python $(SRC_DIR)/manage.py startapp $(name)
 
+test:
+	PYTHONPATH=$(SRC_DIR): uv run pytest
+
 admin:
 	PYTHONPATH=$(SRC_DIR): uv run python $(SRC_DIR)/manage.py createsuperuser
 
