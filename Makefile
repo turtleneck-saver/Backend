@@ -18,7 +18,7 @@ app:
 	PYTHONPATH=$(SRC_DIR): uv run python $(SRC_DIR)/manage.py startapp $(name)
 
 test:
-	PYTHONPATH=$(SRC_DIR): uv run pytest
+	PYTHONPATH=$(SRC_DIR): uv run pytest -s
 
 admin:
 	PYTHONPATH=$(SRC_DIR): uv run python $(SRC_DIR)/manage.py createsuperuser

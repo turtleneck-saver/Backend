@@ -11,6 +11,7 @@ async def test_echo_consumer_receives_and_sends_message():
     communicator = WebsocketCommunicator(
         EchoConsumer.as_asgi(), "/ws/chat/testroom/")
     try:
+        print('안녕')
         connected, subprotocol = await communicator.connect()
         assert connected is True
 
