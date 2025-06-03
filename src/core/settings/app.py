@@ -19,6 +19,6 @@ THIRD_PARTY_APPS = [
     'channels'
 ]
 
-LOCAL_APPS = ['auth', 'web_socket']
+LOCAL_APPS = ['board', 'auth', 'web_socket']
 SITE_ID = 3
 INSTALLED_APPS = VANILA_APPS + THIRD_PARTY_APPS

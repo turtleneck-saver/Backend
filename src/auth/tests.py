@@ -174,23 +174,18 @@ def test_user_detail_authenticated(client, test_user):
     """
     /api/auth/user/ 뷰에 로그인한 사용자가 접근할 수 있는지 테스트.
     """
-    # 테스트 사용자로 로그인
+
     client.force_login(test_user)
 
-    # 'user_detail' URL 이름으로 URL 가져오기
     user_detail_url = reverse('user_detail')
 
-    # GET 요청 보내기
     response = client.get(user_detail_url)
 
-    # 응답 상태 코드가 200 (성공)인지 확인!
     assert response.status_code == 200
 
-    # 응답 데이터에 사용자 정보가 있는지 (선택 사항)
-    # assert response.json()['username'] == 'testuser'
+    assert response.json()['username'] == 'testuser'
 
 
-# UserDetailView 테스트 (로그인 안 한 사용자는 접근 불가)
 def test_user_detail_unauthenticated(client):
     """
     /api/auth/user/ 뷰에 로그인 안 한 사용자가 접근할 수 없는지 테스트.
@@ -198,9 +193,6 @@ def test_user_detail_unauthenticated(client):
     """
     user_detail_url = reverse('user_detail')
 
-    # 로그인 안 한 상태로 GET 요청 보내기
     response = client.get(user_detail_url)
 
-    # 응답 상태 코드가 401 (Unauthorized) 또는 403 (Forbidden)인지 확인!
-    # DRF 기본 인증 설정에 따라 다를 수 있지만, JWT나 세션 인증 실패 시 401이 흔해요!
     assert response.status_code in [401, 403]
