@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from auth.views import *
+from oauth.views import *
 from board.views import CounterAPIView  # 위에서 만든 View 클래스 가져오기
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
