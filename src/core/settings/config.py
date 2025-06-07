@@ -21,5 +21,5 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
-
+CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

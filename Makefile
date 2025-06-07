@@ -20,6 +20,9 @@ app:
 test:
 	PYTHONPATH=$(SRC_DIR): uv run pytest -s
 
+celery:
+	PYTHONPATH=$(SRC_DIR): uv run celery -A core.celery worker -l info -c 1
+
 admin:
 	PYTHONPATH=$(SRC_DIR): uv run python $(SRC_DIR)/manage.py createsuperuser
 
